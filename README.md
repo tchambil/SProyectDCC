@@ -1,4 +1,4 @@
-SProyectDCC
+﻿SProyectDCC
 ===========
 
-Sistema de Administración de Proyecto DCC
+Sistema de Administración de Proyectos DCC
