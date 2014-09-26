@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="estilo.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="select2-3.5.1/select2.js"></script>
+		<script src="select2-3.5.1/select2_locale_es.js"></script>
+		<link href="select2-3.5.1/select2.css" rel="stylesheet"/>
+		<script>
+			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
+			$.datepicker.regional['es'] = {
+				 closeText: 'Cerrar',
+				 prevText: '<Ant',
+				 nextText: 'Sig>',
+				 currentText: 'Hoy',
+				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+				 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+				 weekHeader: 'Sm',
+				 dateFormat: 'dd/mm/yy',
+				 firstDay: 1,
+				 isRTL: false,
+				 showMonthAfterYear: false,
+				 yearSuffix: ''
+			 };
+			$.datepicker.setDefaults($.datepicker.regional['es']);
+			
+			$(document).ready(
+				function() {					
+					/* Fijo los datepicker de jQuery UI. */
+					$( "#fecha_inicio" ).datepicker();
+					$( "#fecha_termino" ).datepicker();
+					
+					/* Fijo los selects customizados para datos dinámicos. */
+					$("#directores").select2({width:606});
+					$("#subdirectores").select2({width:606});
+					$("#investigadores_principales").select2({width:606});
+					
+					/* Marco todos los campos requeridos con un asterisco. */
+					$(".required").append("<div class='marca_obligatorios'>*</div>");
+					
+					/* Ajusto la altura del menú lateral. */
+					var alto_contenido = $("#contenido").height();
+					$("#menu_lateral").height(alto_contenido);
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<a href="javascript:"><img id="logo" src="logo.png" alt="logo" /></a>
+			<div id="login">
+				<p><img id="llave_login" src="llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<nav id="menu_lateral">
+			<a href="buscar_proyecto.php">Buscar Proyecto</a>
+			<a href="ingresar_proyecto.php">Ingresar Proyecto</a>
+			<a href="declarar_deposito.php">Declarar Depósito</a>
+			<a href="informe_financiero.php">Informe Financiero</a>
+			<a href="estadisticas.php">Estadísticas</a>
+		</nav>
+		<article id="contenido">
+			<h1>Ingreso de proyecto Milenio</h1>
+			<section>
+				<h2>Información Básica</h2>
+				<span id="wrapper_numero_proyecto">
+					<label for="numero_proyecto" id="label_numero_proyecto" class="required">N° Identificador</label>
+					<input type="text" name="numero_proyecto" id="numero_proyecto" />
+				</span>
+				<span id="wrapper_fecha_inicio">
+					<label for="fecha_inicio" id="label_fecha_inicio" class="required">Fecha de inicio</label>
+					<input type="text" name="fecha_inicio" id="fecha_inicio" />
+				</span>
+				<span id="wrapper_fecha_termino">
+					<label for="fecha_termino" id="label_fecha_termino" class="required">Fecha de término</label>
+					<input type="text" name="fecha_termino"  id="fecha_termino"/>
+				</span>
+				<span id="wrapper_titulo">
+					<label for="titulo" id="label_titulo" class="required">Título</label>
+					<input type="text" name="titulo"  id="titulo"/>
+				</span>
+				<span id="wrapper_estado">
+					<label for="estado" id="label_estado" class="required">Estado Actual</label>
+					<select name="estado" id="estado">
+						<option>Nuevo</option>
+						<option>Suspendido</option>
+						<option>Terminado</option>
+						<option>Cancelado</option>
+					</select>
+				</span>
+				<span id="wrapper_comentario">
+					<label for="comentario" id="label_comentario">Comentario</label>
+					<textarea name="comentario" id="comentario"></textarea>
+				</span>
+				<span id="wrapper_directores">
+					<label for="directores" id="label_directores" class="required">Director(es)</label>
+					<select multiple id="directores">
+						<option value="AL">Pablo Barceló</option>
+						<option value="AL2">Alejandro Hevia</option>
+						<option value="AL3">Gonzalo Navarro</option>
+						<option value="AL4">Luis Mateu</option>
+						<option value="WY">Eric Tánter</option>
+						<option value="WYX">Miguela Ñoquis</option>
+					</select>
+				</span>
+				<span id="wrapper_subdirectores">
+					<label for="subdirectores" id="label_subdirectores" class="required">Subdirector(es)</label>
+					<select multiple id="subdirectores">
+						<option value="AL">Pablo Barceló</option>
+						<option value="AL3">Alejandro Hevia</option>
+						<option value="AL4">Gonzalo Navarro</option>
+						<option value="AL2">Luis Mateu</option>
+						<option value="WY">Eric Tánter</option>
+						<option value="WYX">Miguela Ñoquis</option>
+					</select>
+				</span>
+				<span id="wrapper_investigadores_principales">
+					<label for="investigadores_principales" id="label_investigadores_principales" class="required">Investigador(es) Principal(es)</label>
+					<select multiple id="investigadores_principales">
+						<option value="AL">Pablo Barceló</option>
+						<option value="AL3">Alejandro Hevia</option>
+						<option value="AL4">Gonzalo Navarro</option>
+						<option value="AL2">Luis Mateu</option>
+						<option value="WY">Eric Tánter</option>
+						<option value="WYX">Miguela Ñoquis</option>
+					</select>
+				</span>
+			</section>
+			<section>
+				<h2>Información Administrativa</h2>
+				<span id="wrapper_empresa_cliente">
+					<label for="empresa_cliente" id="label_empresa_cliente" class="required">Empresa Cliente</label>
+					<input type="text" name="empresa_cliente" id="empresa_cliente" />
+				</span>
+				<h3>Contacto Cliente</h3>
+				<span id="wrapper_nombre_cliente">
+					<label for="nombre_cliente" id="label_nombre_cliente" class="required">Nombre</label>
+					<input type="text" name="nombre_cliente" id="nombre_cliente" />
+				</span>
+				<span id="wrapper_telefono_cliente">
+					<label for="telefono_cliente" id="label_telefono_cliente" class="required">Teléfono</label>
+					<input type="text" name="telefono_cliente" id="telefono_cliente" />
+				</span>
+				<span id="wrapper_email_cliente">
+					<label for="email_cliente" id="label_email_cliente">E-Mail</label>
+					<input type="text" name="email_cliente" id="email_cliente" />
+				</span>
+				<span id="wrapper_unidades_ejecutoras">
+					<label for="unidades_ejecutoras" id="label_unidades_ejecutoras">Unidad(es) Ejecutora(s)</label>
+					<input type="text" name="unidades_ejecutoras" id="unidades_ejecutoras" />
+				</span>
+			</section>
+			<section>
+				<h2>Información Financiera</h2>
+				<span id="wrapper_organismos_financiadores">
+					<label for="organismos_financiadores" id="label_organismos_financiadores" class="required">Organismos que Financian</label>
+					<input type="text" name="organismos_financiadores" id="organismos_financiadores" />
+				</span>
+				<span id="wrapper_monto_total">
+					<label for="monto_total" id="label_monto_total" class="required">Monto Total</label>
+					<input type="text" name="monto_total" id="monto_total" />
+				</span>
+				<span id="wrapper_monto_administracion">
+					<label for="monto_administracion" id="label_monto_administracion" class="required">Monto Administración</label>
+					<input type="text" name="monto_administracion" id="monto_administracion" />
+				</span>
+				<span id="wrapper_peaje_dcc">
+					<label for="peaje_dcc" id="label_peaje_dcc" class="required">Peaje DCC (%)</label>
+					<input type="text" name="peaje_dcc" id="peaje_dcc" />
+				</span>
+				<span id="wrapper_peaje_casa_central">
+					<label for="peaje_casa_central" id="label_peaje_casa_central" class="required">Peaje Casa Central y Facultad (%)</label>
+					<input type="text" name="peaje_casa_central" id="peaje_casa_central" />
+				</span>
+				<div id="wrapper_montos">
+					<h3>Montos por Período</h3>
+					<span class="wrapper_monto_por_periodo">
+						<label for="monto_administracion" id="label_monto_administracion">2012</label>
+						<input type="text" name="monto_administracion" id="monto_administracion" />
+					<span class="wrapper_monto_por_periodo">
+					<span class="wrapper_monto_por_periodo">
+						<label for="monto_administracion" id="label_monto_administracion">2013</label>
+						<input type="text" name="monto_administracion" id="monto_administracion" />
+					</span>
+					<span class="wrapper_monto_por_periodo">
+						<label for="monto_administracion" id="label_monto_administracion">2014</label>
+						<input type="text" name="monto_administracion" id="monto_administracion" type="number" />
+					</span>
+				</div>
+			</section>
+			<section>
+				<h2>Información Adicional</h2>
+				<!--<span id="wrapper_numero_resolucion">
+					<label for="numero_resolucion" id="label_numero_resolucion" class="required">N° Resolución</label>
+					<input type="text" name="numero_resolucion" id="numero_resolucion" />
+				</span>-->
+				<span id="wrapper_resumen">
+					<label for="resumen" id="label_resumen">Resumen del proyecto</label>
+					<textarea name="resumen" id="resumen"></textarea>
+				</span>
+			</section>
+			<p id="nota_campos_obligatorios">* Indica que el campo es obligatorio</p>
+			<input type="button" id="ingresar_proyecto" value="Ingresar proyecto" />
+		</article>
+		<footer id="footer_pagina">
+			<p id="mensaje_divino">Un divertido proyecto realizado por amigos repletos de entusiasmo</p>
+		</footer>
+    </body>
+</html>
