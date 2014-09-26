@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="buscar.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="select2-3.5.1/select2.js"></script>
+		<script src="select2-3.5.1/select2_locale_es.js"></script>
+		<script>
+			/* Con esto traduzco todos los datepickers de jQuery UI a espa�ol. */
+			$.datepicker.regional['es'] = {
+				 closeText: 'Cerrar',
+				 prevText: '<Ant',
+				 nextText: 'Sig>',
+				 currentText: 'Hoy',
+				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+				 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+				 weekHeader: 'Sm',
+				 dateFormat: 'dd/mm/yy',
+				 firstDay: 1,
+				 isRTL: false,
+				 showMonthAfterYear: false,
+				 yearSuffix: ''
+			 };
+			$.datepicker.setDefaults($.datepicker.regional['es']);
+			
+			$( "input[type=button], button").button();
+			
+			$(document).ready(
+				function() {					
+					/* Aqu� ajusto la altura del men� lateral. */
+					var alto_contenido = $("#contenido").height();
+					$("#menu_lateral").height(alto_contenido - 127	);
+					
+					var alto_titulo = $("#titulo").height();
+					$("#estado").height(alto_titulo);
+					
+					/* Fijo los datepicker de jQuery UI. */
+					$( "#fecha_inicio" ).datepicker();
+					$( "#fecha_termino" ).datepicker();
+					
+					/* Fijo los selects customizados para datos din�micos. */
+					$("#responsables").select2({width:606});
+					$("#participantes").select2({width:606});
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<div id="login">
+				<p>Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<table>
+			<tr>
+				<td id="menu_lateral">
+					<a href="buscar_proyecto.php">Buscar Proyecto</a>
+					<a href="ingresar_proyecto.php">Ingresar Proyecto</a>
+					<a href="declarar_deposito.php">Declarar Depósito</a>
+					<a href="informe_financiero.php">Informe Financiero</a>
+					<a href="estadisticas.php">Estadísticas</a>
+				</td>
+				<td id="contenido">
+					<h1 style="text-align:center;">Bienvenido!</h1>
+					<div id="busqueda_rapida" style="border: 1px solid black; height: 80px; padding: 10px 0px 10px 10px;">
+						<h2>Búsqueda Rápida</h2>
+						<span id="wrapper_desde">
+							<label for="desde" id="label_desde">Desde</label>
+							<input type="text" name="desde" id="desde" />
+						</span>
+						<span id="wrapper_hasta" style="margin-left: 30px;">
+							<label for="hasta" id="label_hasta">Hasta</label>
+							<input type="text" name="hasta"  id="hasta"/>
+						</span>
+						<span id="wrapper_tipo" style="float:left; padding-top: 0px; margin-left: 30px;">
+							<label for="tipo" id="label_tipo">Tipo</label>
+							<select name="tipo" id="tipo">
+								<option value="0">Tipo...</option>
+								<option value="1">FONDECYT</option>
+								<option value="2">FONDEF</option>
+								<option value="3">MILENIO</option>
+								<option value="4">ANILLO</option>
+								<option value="5">EXTERNO</option>
+							</select>
+						</span>
+						<span id="wrapper_buscar" style="float: left; padding: 5px;">
+							<button name="buscar"  id="buscar">Buscar</button>
+						</span>
+					</div>
+					<div id="publicaciones" style="border: 1px solid black; padding: 10px 0px 10px 10px; margin-top: 30px;">
+						<h2>Últimas Publicaciones</h2>
+						<table style="font-family: 'HelveticaNeue', Arial; font-size: 14px;">
+							<tr>
+								<td style="width: 100px;"><h3>Proyecto 1</h3></td>
+								<td style="width: 200px;">
+									<label>Responsable: Sergio Ochoa</label>
+									<label>Tipo: FONDEF</label>
+									<label>Periodo: 2014 - 2016</label>
+								</td>
+								<td style="width: 20px;">
+									<a href="#">Modificar</a>
+									<div/>
+									<a href="#">Eliminar</a>
+									<div/>
+									<a href="#">Más Info...</a>
+								</td>
+							</tr>
+							<tr>
+								<td><h3>Proyecto 2</h3></td>
+								<td>
+									<label>Responsable: Jorge Pérez</label>
+									<label>Tipo: FONDECYT</label>
+									<label>Periodo: 2014 - 2016</label>
+								</td>
+								<td>
+									<a href="#">Modificar</a>
+									<a href="#">Eliminar</a>
+									<a href="#">Más Info...</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			<tr>
+		</table>
+		<footer id="footer_pagina">
+		</footer>
+    </body>
+</html>

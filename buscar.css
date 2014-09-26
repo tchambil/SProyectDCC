@@ -1,0 +1,219 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('nexa_light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('helvetica_neue.otf') format('opentype');
+}
+
+html, body {
+	height: 100%;
+	background: #ffffff;
+}
+
+#header_pagina {
+	display: block;
+	width: 100%;
+	height: 80px;
+	background: #919ad5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919ad5), color-stop(99%,#5c6dac)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #919ad5 0%,#5c6dac 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919ad5', endColorstr='#5c6dac',GradientType=0 ); /* IE6-9 */
+}
+
+#login {
+	padding-top: 35px;
+	margin-right: 15px;
+	font-family: 'HelveticaNeue', Arial;
+	font-size: 14px;
+	text-align: right;
+	line-height: 1.3;
+	color: white;
+}
+
+#login a {
+	text-decoration: none;
+	color: white;
+}
+
+#login a:hover {
+	text-decoration: underline;
+}
+
+#menu_lateral {
+	width: 200px;
+	padding-bottom: 100px;;
+	float: left;
+	margin-right: 50px;
+	padding-top: 50px;
+	padding-left: 30px;
+	background: #d9dbe1;
+}
+
+#menu_lateral a {
+	display: block;
+	padding-bottom: 20px;
+	text-decoration: none;
+	font-family: 'NexaLight', Arial;
+	font-size: 17px;
+	color: #324652;
+}
+
+#menu_lateral a:hover {
+	text-decoration: underline;
+	color: #324652;
+}
+
+#contenido {
+	float: left;
+	background: #ffffff;
+}
+
+#contenido h1, #contenido h2 {
+	font-family: 'NexaLight', Arial;
+}
+
+#contenido h1 {
+	padding: 45px 0px 30px 0px;
+	font-size: 30px;
+}
+
+#contenido h2 {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+#contenido h3 {
+	font-family: 'HelveticaNeue', Arial;
+	font-size: 13px;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#contenido label {
+	display: block;
+	font-family: 'HelveticaNeue';
+	font-size: 13px;
+	margin-bottom: 4px;
+}
+
+#contenido input, #contenido textarea, #contenido select {
+	font-family: 'HelveticaNeue';
+	font-size: 13px;
+	padding-left: 3px;
+	border: 1px solid #aac9ce;
+	float: left;
+}
+
+#contenido input {
+	height: 18px;
+}
+
+#contenido span {
+	display: block;
+}
+
+/*
+
+	Desde aquí posiciono los wrappers para cada campo.
+
+*/
+#wrapper_notificacion {
+	border: 1px solid orange;
+	padding: 10px;
+	margin: 0px 0px 30px 0px;
+	width: 280px;
+	color: orange;
+	background: rgb(255,255,136); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,136,1) 0%, rgba(255,255,249,1) 66%, rgba(255,255,249,1) 66%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,136,1)), color-stop(66%,rgba(255,255,249,1)), color-stop(66%,rgba(255,255,249,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#fffff9',GradientType=0 );
+}
+#wrapper_desde {
+	float: left;
+	padding: 0px 0px 10px 0px;
+}
+
+#wrapper_desde input {
+	width: 100px;
+}
+
+#wrapper_hasta {
+	float: left;
+	margin-left: 95px;
+}
+
+#wrapper_hasta input {
+	width: 100px;
+}
+
+#wrapper_tipo {
+	padding-top: 40px;
+	margin-right: 20px;
+	width: 100px;
+}
+
+#wrapper_tipo input {
+	width: 100%;
+}
+
+#wrapper_tituloproy {
+	padding-top: 40px;
+	margin-right: 20px;
+	width: 300px;
+}
+
+#wrapper_tituloproy input {
+	width: 100%;
+}
+
+#wrapper_investigador {
+	padding-top: 40px;
+	margin-right: 20px;
+	width: 300px;
+}
+
+#wrapper_investigador input {
+	width: 100%;
+}
+
+#wrapper_buscar {
+	padding-top: 20px;
+	margin-right: 20px;
+}
+
+/*
+
+	Terminé con los wrappers. Me dio hambre porque recordé unos wraps que
+	venden en el Tarragona. Voy a ver si hay algo para comer.
+
+*/
+
+
+#footer_pagina {
+	float: left;
+	display: block;
+	width: 100%;
+	height: 80px;
+	background: #919ad5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919ad5), color-stop(99%,#5c6dac)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #919ad5 0%,#5c6dac 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919ad5', endColorstr='#5c6dac',GradientType=0 ); /* IE6-9 */
+}
