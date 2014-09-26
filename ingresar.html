@@ -1,4 +1,4 @@
-<!doctype html>
+Ôªø<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -12,7 +12,7 @@
 		<script src="select2-3.5.1/select2.js"></script>
 		<script src="select2-3.5.1/select2_locale_es.js"></script>
 		<script>
-			/* Con esto traduzco todos los datepickers de jQuery UI a espa√±ol. */
+			/* Con esto traduzco todos los datepickers de jQuery UI a espaÒol. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
 				 prevText: '<Ant',
@@ -20,9 +20,9 @@
 				 currentText: 'Hoy',
 				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
 				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Mi√©rcoles', 'Jueves', 'Viernes', 'S√°bado'],
-				 dayNamesShort: ['Dom','Lun','Mar','Mi√©','Juv','Vie','S√°b'],
-				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S√°'],
+				 dayNames: ['Domingo', 'Lunes', 'Martes', 'MiÈrcoles', 'Jueves', 'Viernes', 'S·bado'],
+				 dayNamesShort: ['Dom','Lun','Mar','MiÈ','Juv','Vie','S·b'],
+				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','S·'],
 				 weekHeader: 'Sm',
 				 dateFormat: 'dd/mm/yy',
 				 firstDay: 1,
@@ -36,7 +36,7 @@
 			
 			$(document).ready(
 				function() {					
-					/* Aqu√≠ ajusto la altura del men√∫ lateral. */
+					/* AquÌ ajusto la altura del men˙ lateral. */
 					var alto_contenido = $("#contenido").height();
 					$("#menu_lateral").height(alto_contenido - 127	);
 					
@@ -47,7 +47,7 @@
 					$( "#desde" ).datepicker();
 					$( "#hasta" ).datepicker();
 					
-					/* Fijo los selects customizados para datos din√°micos. */
+					/* Fijo los selects customizados para datos din·micos. */
 					$("#responsables").select2({width:606});
 					$("#participantes").select2({width:606});
 				}
@@ -64,7 +64,7 @@
 		</header>
 		<table>
 			<tr>
-				<td id="menu_lateral">
+				<td id="menu_lateral" style="padding-bottom: 150px;">
 					<a href="buscar.html">Buscar Proyecto</a>
 					<a href="ingresar.html">Ingresar Proyecto</a>
 					<a href="#">Declarar Dep√≥sito</a>
@@ -72,19 +72,8 @@
 					<a href="#">Estad√≠sticas</a>
 				</td>
 				<td id="contenido">
-					<h1>Buscar Proyectos</h1>
-					<span id="wrapper_notificacion">
-						<label id="notificacion">√Årea de notificaci√≥n</label>
-					</span>
-					<span id="wrapper_desde">
-						<label for="desde" id="label_desde">Desde</label>
-						<input type="text" name="desde" id="desde" />
-					</span>
-					<span id="wrapper_hasta">
-						<label for="hasta" id="label_hasta">Hasta</label>
-						<input type="text" name="hasta"  id="hasta"/>
-					</span>
-					<span id="wrapper_tipo">
+					<h1>Ingresar Nuevo Proyecto</h1>
+					<span id="wrapper_tipo" style="padding-top: 0px; padding-bottom:40px">
 						<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
 						<select name="tipo" id="tipo">
 							<option value="0">Tipo...</option>
@@ -95,16 +84,8 @@
 							<option value="5">EXTERNO</option>
 						</select>
 					</span>
-					<span id="wrapper_tituloproy">
-						<label for="tituloproy" id="label_tituloproy">T√≠tulo del Proyecto</label>
-						<input type="text" name="tituloproy"  id="tituloproy"/>
-					</span>
-					<span id="wrapper_investigador">
-						<label for="investigador" id="label_investigador">Nombre del Investigador</label>
-						<input type="text" name="investigador"  id="investigador"/><label style="font-size: 11px;">Ejemplo: Jorge P√©rez</label>
-					</span>
 					<span id="wrapper_buscar">
-						<button name="buscar"  id="buscar">Buscar</button>
+						<button name="siguiente"  id="siguiente" onclick="location.href='mantenedor_proyectos.html'" style="position: absolute;">Siguiente</button>
 					</span>
 				</td>
 			<tr>
