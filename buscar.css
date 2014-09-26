@@ -30,11 +30,17 @@ html, body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919ad5', endColorstr='#5c6dac',GradientType=0 ); /* IE6-9 */
 }
 
+#logo {
+	float: left;
+	margin-top: 17px;
+	margin-left: 30px;
+}
+
 #login {
-	padding-top: 35px;
+	padding-top: 23px;
 	margin-right: 15px;
 	font-family: 'HelveticaNeue', Arial;
-	font-size: 14px;
+	font-size: 13px;
 	text-align: right;
 	line-height: 1.3;
 	color: white;
@@ -47,6 +53,10 @@ html, body {
 
 #login a:hover {
 	text-decoration: underline;
+}
+
+#llave_login {
+	padding-right: 5px;
 }
 
 #menu_lateral {
