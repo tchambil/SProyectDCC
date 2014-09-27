@@ -15,6 +15,7 @@
 			function autoClear(){
 				if(first){
 					$("#investigador").val("");
+					$("#investigador").css('color', 'black');
 					first = false;
 				}
 			}
@@ -100,7 +101,7 @@
 					</span>
 					<span id="wrapper_investigador">
 						<label for="investigador" id="label_investigador">Nombre del Investigador</label>
-						<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" onclick="autoClear();"/>
+						<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" style="color: #BDBDBD;" onclick="autoClear();"/>
 					</span>
 					<span id="wrapper_buscar" style="padding-top: 30px; padding-bottom: 30px">
 						<button name="buscar"  id="buscar">Buscar</button>
