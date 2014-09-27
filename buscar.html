@@ -9,7 +9,6 @@
 		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
 		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
-		<script src="js/jquery-1.11.1.min.js"></script>
 		<script>
 			var first = true;
 			function autoClear(){
@@ -50,6 +49,8 @@
 					/* Fijo los datepicker de jQuery UI. */
 					$( "#desde" ).datepicker();
 					$( "#hasta" ).datepicker();
+					/* Marco todos los campos requeridos con un asterisco. */
+					$(".required").append("<div class='marca_obligatorios'>*</div>");
 				}
 			);
 		</script>
@@ -67,7 +68,7 @@
 				<td id="menu_lateral">
 					<a href="buscar.html">Buscar Proyecto</a>
 					<a href="ingresar.html">Ingresar Proyecto</a>
-					<a href="#">Declarar Depósito</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
 					<a href="#">Informe Financiero</a>
 					<a href="#">Estadísticas</a>
 				</td>

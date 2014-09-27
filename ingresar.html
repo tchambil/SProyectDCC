@@ -17,6 +17,8 @@
 					/* Aquí ajusto la altura del menú lateral. */
 					var alto_contenido = $("#contenido").height();
 					$("#menu_lateral").height(alto_contenido - 127	);
+					/* Marco todos los campos requeridos con un asterisco. */
+					$(".required").append("<div class='marca_obligatorios'>*</div>");
 				}
 			);
 		</script>
@@ -34,14 +36,14 @@
 				<td id="menu_lateral">
 					<a href="buscar.html">Buscar Proyecto</a>
 					<a href="ingresar.html">Ingresar Proyecto</a>
-					<a href="#">Declarar Depósito</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
 					<a href="#">Informe Financiero</a>
 					<a href="#">Estadísticas</a>
 				</td>
 				<td id="contenido">
 					<h1>Ingresar Nuevo Proyecto</h1>
 					<span id="wrapper_tipo">
-						<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
+						<label for="tipo" id="label_tipo" class="required">Tipo de Proyecto</label>
 						<select name="tipo" id="tipo">
 							<option value="0">Tipo...</option>
 							<option value="1">FONDECYT</option>

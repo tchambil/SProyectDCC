@@ -13,13 +13,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 html, body {
 	height: 100%;
-	background: #d9dbe1;
+	background: #ffffff;
 }
 
 #header_pagina {
 	display: block;
 	width: 100%;
-	height: 80px;
+	height: 79px;
+	border-bottom: 1px solid #009;
 	background: #919ad5; /* Old browsers */
 	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919ad5), color-stop(99%,#5c6dac)); /* Chrome,Safari4+ */
@@ -30,11 +31,17 @@ html, body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919ad5', endColorstr='#5c6dac',GradientType=0 ); /* IE6-9 */
 }
 
+#logo {
+	float: left;
+	margin-top: 17px;
+	margin-left: 30px;
+}
+
 #login {
-	padding-top: 35px;
+	padding-top: 23px;
 	margin-right: 15px;
 	font-family: 'HelveticaNeue', Arial;
-	font-size: 14px;
+	font-size: 13px;
 	text-align: right;
 	line-height: 1.3;
 	color: white;
@@ -49,12 +56,19 @@ html, body {
 	text-decoration: underline;
 }
 
+#llave_login {
+	padding-right: 5px;
+}
+
 #menu_lateral {
 	width: 200px;
+	padding-bottom: 443px;
 	float: left;
 	margin-right: 50px;
-	padding: 50px 0 0 30px;
+	padding-top: 50px;
+	padding-left: 30px;
 	background: #d9dbe1;
+	border-right: 1px solid #acafae;
 }
 
 #menu_lateral a {
@@ -71,8 +85,15 @@ html, body {
 	color: #324652;
 }
 
+.marca_obligatorios {
+	display: inline;
+	margin-left: 3px;
+	color: #f00;
+	font-size: 15px;
+}
+
 #contenido {
-	display: block;
+	float: left;
 	background: #ffffff;
 }
 
@@ -81,14 +102,12 @@ html, body {
 }
 
 #contenido h1 {
-	padding-top: 45px;
+	padding: 45px 0px 30px 0px;
 	font-size: 30px;
 }
 
 #contenido h2 {
 	font-size: 18px;
-	margin-top: 30px;
-	margin-bottom: 15px;
 }
 
 #contenido h3 {
@@ -110,6 +129,7 @@ html, body {
 	font-size: 13px;
 	padding-left: 3px;
 	border: 1px solid #aac9ce;
+	float: left;
 }
 
 #contenido input {
@@ -122,157 +142,142 @@ html, body {
 
 /*
 
-	Desde aquÃ­ posiciono los wrappers para cada campo.
+	Desde aquí posiciono los wrappers para cada campo.
 
 */
-
-#wrapper_numero_proyecto {
-	float: left;
+#wrapper_notificacion {
+	border: 1px solid orange;
+	padding: 10px;
+	margin: 0px 0px 30px 0px;
+	width: 380px;
+	color: orange;
+	background: rgb(255,255,136); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,136,1) 0%, rgba(255,255,249,1) 66%, rgba(255,255,249,1) 66%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,136,1)), color-stop(66%,rgba(255,255,249,1)), color-stop(66%,rgba(255,255,249,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#fffff9',GradientType=0 );
 }
 
-#wrapper_numero_proyecto input {
-	width: 100px;
-}
-
-#wrapper_fecha_inicio {
-	float: left;
-	margin-right: 28px;
-	margin-left: 64px;
-}
-
-#wrapper_fecha_inicio input {
-	width: 100px;
-}
-
-#wrapper_fecha_termino input {
-	width: 100px;
-}
-
-#wrapper_titulo {
-	float: left;
-	margin-top: 10px;
-	margin-right: 20px;
-	width: 452px;
-}
-
-#wrapper_titulo input {
-	width: 100%;
-}
-
-#wrapper_estado {
-	margin-top: 10px;
-}
-
-#wrapper_estado select {
-	width: 135px;
-	padding-top: 1px;
-	padding-bottom: 2px;
-}
-
-#wrapper_estado option {
-	padding: 5px;
-}
-
-#wrapper_comentario {
-	margin-top: 14px;
-}
-
-#wrapper_comentario textarea {
-	width: 600px;
-	height: 100px;
-}
-
-#wrapper_responsables {
-	margin-top: 10px;
-}
-
-#wrapper_responsables input {
-	border: none;
-}
-
-#wrapper_participantes {
-	margin-top: 10px;
-}
-
-#wrapper_participantes input {
-	border: none;
-}
-
-#wrapper_empresa_cliente input {
-	width: 403px;
-}
-
-#wrapper_nombre_cliente {
-	float: left;
-}
-
-#wrapper_nombre_cliente input {
-	width: 275px;
-}
-
-#wrapper_telefono_cliente {
-	float: left;
-	margin-left: 20px;
-	margin-right: 20px;
-}
-
-#wrapper_telefono_cliente input {
-	width: 100px;
-}
-
-#wrapper_email_cliente input {
-	width: 170px;
-}
-
-#wrapper_unidades_ejecutoras {
-	margin-top: 10px;
-}
-
-#wrapper_unidades_ejecutoras input {
-	width: 403px;
-}
-
-#wrapper_organismos_financiadores input {
-	width: 403px;
-}
-
-#wrapper_monto_total {
-	float: left;
-	margin-top: 10px;
-	margin-right: 20px;
-}
-
-#wrapper_monto_administracion {
-	margin-top: 10px;
-}
-
-#wrapper_montos_por_periodo label {
-	display: inline;
-}
-.wrapper_monto_por_periodo {
-	margin-top: 10px;
-}
-
-.wrapper_monto_por_periodo input {
-	width: 100px;
-	text-align: right;
-	margin-left: 5px;
-	padding: 0 5px;
-}
-
-#wrapper_resumen {
-	margin-top: 10px;
-}
-
-#wrapper_resumen textarea {
-	width: 600px;
-	height: 100px;
+#proyecto {
+	width: 400px;
+	border: 1px solid black;
 	margin-bottom: 30px;
 }
 
+#wrapper_ptitulo {
+	padding: 10px;
+}
+
+#wrapper_tipo {
+	padding: 10px;
+}
+
+#wrapper_tipo input {
+	width: 200px;
+}
+
+#wrapper_numero {
+	padding: 10px;
+}
+
+#wrapper_numero input {
+	width: 200px;
+}
+
+#datos_deposito {
+	margin-bottom: 20px;
+	width: 400px;
+	border: 1px solid black;
+}
+
+#wrapper_dtitulo {
+	padding: 10px;
+}
+
+#wrapper_ncuenta {
+	padding: 10px;
+}
+
+#wrapper_ncuenta input {
+	width: 100px;
+}
+
+#wrapper_banco {
+	padding: 10px;
+}
+
+#wrapper_banco input {
+	width: 100px;
+}
+
+#wrapper_ndeposito {
+	padding: 10px;
+}
+
+#wrapper_ndeposito input {
+	width: 100px;
+}
+
+#wrapper_org {
+	padding: 10px;
+}
+
+#wrapper_org input {
+	width: 100px;
+}
+
+#wrapper_fecha {
+	padding: 10px;
+}
+
+#wrapper_fecha input {
+	width: 100px;
+}
+
+#wrapper_periodo {
+	padding: 10px;
+}
+
+#wrapper_periodo input {
+	width: 100px;
+}
+
+#wrapper_monto {
+	padding: 10px;
+}
+
+#wrapper_monto input {
+	width: 100px;
+}
+
+#guardar {
+	margin-bottom: 30px;
+}
+
+#contenido button {
+	font-family: 'HelveticaNeue';
+	font-size: 15px;
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+	vertical-align: top;
+	background: #919ad5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919ad5), color-stop(99%,#5c6dac)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #919ad5 0%,#5c6dac 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #919ad5 0%,#5c6dac 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#919ad5', endColorstr='#5c6dac',GradientType=0 ); /* IE6-9 */
+	color: #ffffff;
+	cursor: pointer;
+}
 /*
 
-	TerminÃ© con los wrappers. Me dio hambre porque recordÃ© unos wraps que
+	Terminé con los wrappers. Me dio hambre porque recordé unos wraps que
 	venden en el Tarragona. Voy a ver si hay algo para comer.
 
 */

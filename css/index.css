@@ -19,7 +19,8 @@ html, body {
 #header_pagina {
 	display: block;
 	width: 100%;
-	height: 80px;
+	height: 79px;
+	border-bottom: 1px solid #009;
 	background: #919ad5; /* Old browsers */
 	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#919ad5), color-stop(99%,#5c6dac)); /* Chrome,Safari4+ */
@@ -67,6 +68,7 @@ html, body {
 	padding-top: 50px;
 	padding-left: 30px;
 	background: #d9dbe1;
+	border-right: 1px solid #acafae;
 }
 
 #menu_lateral a {
@@ -81,6 +83,13 @@ html, body {
 #menu_lateral a:hover {
 	text-decoration: underline;
 	color: #324652;
+}
+
+.marca_obligatorios {
+	display: inline;
+	margin-left: 3px;
+	color: #f00;
+	font-size: 15px;
 }
 
 #contenido {
