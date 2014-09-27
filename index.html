@@ -3,16 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>U-Proyectos</title>
-		<link href="buscar.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
-		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
-		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
-		<script src="select2-3.5.1/select2.js"></script>
-		<script src="select2-3.5.1/select2_locale_es.js"></script>
+		<link href="css/index.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		<script>
-			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
+			/* Con esto traduzco todos los datepickers de jQuery UI a espaÃ±ol. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
 				 prevText: '<Ant',
@@ -36,20 +34,13 @@
 			
 			$(document).ready(
 				function() {					
-					/* Aquí ajusto la altura del menú lateral. */
+					/* AquÃ­ ajusto la altura del menÃº lateral. */
 					var alto_contenido = $("#contenido").height();
 					$("#menu_lateral").height(alto_contenido - 127	);
 					
-					var alto_titulo = $("#titulo").height();
-					$("#estado").height(alto_titulo);
-					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#fecha_inicio" ).datepicker();
-					$( "#fecha_termino" ).datepicker();
-					
-					/* Fijo los selects customizados para datos dinámicos. */
-					$("#responsables").select2({width:606});
-					$("#participantes").select2({width:606});
+					$( "#desde" ).datepicker();
+					$( "#hasta" ).datepicker();
 				}
 			);
 		</script>
@@ -73,17 +64,17 @@
 				</td>
 				<td id="contenido">
 					<h1 style="text-align:center;">Bienvenido!</h1>
-					<div id="busqueda_rapida" style="border: 1px solid black; height: 80px; padding: 10px 0px 10px 10px;">
+					<div id="busqueda_rapida">
 						<h2>BÃºsqueda RÃ¡pida</h2>
 						<span id="wrapper_desde">
 							<label for="desde" id="label_desde">Desde</label>
 							<input type="text" name="desde" id="desde" />
 						</span>
-						<span id="wrapper_hasta" style="margin-left: 30px;">
+						<span id="wrapper_hasta">
 							<label for="hasta" id="label_hasta">Hasta</label>
 							<input type="text" name="hasta"  id="hasta"/>
 						</span>
-						<span id="wrapper_tipo" style="float:left; padding-top: 0px; margin-left: 30px;">
+						<span id="wrapper_tipo">
 							<label for="tipo" id="label_tipo">Tipo</label>
 							<select name="tipo" id="tipo">
 								<option value="0">Tipo...</option>
@@ -94,21 +85,21 @@
 								<option value="5">EXTERNO</option>
 							</select>
 						</span>
-						<span id="wrapper_buscar" style="float: left; margin-top:-20px">
+						<span id="wrapper_buscar">
 							<button name="buscar"  id="buscar">Buscar</button>
 						</span>
 					</div>
-					<div id="publicaciones" style="border: 1px solid black; padding: 10px 0px 10px 10px; margin-top: 30px;">
+					<div id="publicaciones">
 						<h2>Ãšltimas Publicaciones</h2>
-						<table style="font-family: 'HelveticaNeue', Arial; font-size: 14px;">
+						<table id="tabla">
 							<tr>
-								<td style="width: 100px;"><h3>Proyecto 1</h3></td>
-								<td style="width: 200px;">
+								<td id="p1"><h3>Proyecto 1</h3></td>
+								<td id="p2">
 									<label>Responsable: Sergio Ochoa</label>
 									<label>Tipo: FONDEF</label>
 									<label>Periodo: 2014 - 2016</label>
 								</td>
-								<td style="width: 20px;">
+								<td id="p3">
 									<a href="#">Modificar</a>
 									<div/>
 									<a href="#">Eliminar</a>
@@ -126,6 +117,7 @@
 								<td>
 									<a href="#">Modificar</a>
 									<a href="#">Eliminar</a>
+									<div/>
 									<a href="#">MÃ¡s Info...</a>
 								</td>
 							</tr>

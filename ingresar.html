@@ -3,53 +3,20 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>U-Proyectos</title>
-		<link href="buscar.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
-		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
-		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
-		<script src="select2-3.5.1/select2.js"></script>
-		<script src="select2-3.5.1/select2_locale_es.js"></script>
+		<link href="css/ingresar.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		<script>
-			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
-			$.datepicker.regional['es'] = {
-				 closeText: 'Cerrar',
-				 prevText: '<Ant',
-				 nextText: 'Sig>',
-				 currentText: 'Hoy',
-				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
-				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
-				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
-				 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
-				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
-				 weekHeader: 'Sm',
-				 dateFormat: 'dd/mm/yy',
-				 firstDay: 1,
-				 isRTL: false,
-				 showMonthAfterYear: false,
-				 yearSuffix: ''
-			 };
-			$.datepicker.setDefaults($.datepicker.regional['es']);
-			
 			$("input[type=button], button").button();
 			
 			$(document).ready(
 				function() {					
-					/* Aquí ajusto la altura del menú lateral. */
+					/* AquÃ­ ajusto la altura del menÃº lateral. */
 					var alto_contenido = $("#contenido").height();
 					$("#menu_lateral").height(alto_contenido - 127	);
-					
-					var alto_titulo = $("#titulo").height();
-					$("#estado").height(alto_titulo);
-					
-					/* Fijo los datepicker de jQuery UI. */
-					$( "#desde" ).datepicker();
-					$( "#hasta" ).datepicker();
-					
-					/* Fijo los selects customizados para datos dinámicos. */
-					$("#responsables").select2({width:606});
-					$("#participantes").select2({width:606});
 				}
 			);
 		</script>
@@ -64,7 +31,7 @@
 		</header>
 		<table>
 			<tr>
-				<td id="menu_lateral" style="padding-bottom: 150px;">
+				<td id="menu_lateral">
 					<a href="buscar.html">Buscar Proyecto</a>
 					<a href="ingresar.html">Ingresar Proyecto</a>
 					<a href="#">Declarar DepÃ³sito</a>
@@ -73,7 +40,7 @@
 				</td>
 				<td id="contenido">
 					<h1>Ingresar Nuevo Proyecto</h1>
-					<span id="wrapper_tipo" style="padding-top: 0px; padding-bottom:40px">
+					<span id="wrapper_tipo">
 						<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
 						<select name="tipo" id="tipo">
 							<option value="0">Tipo...</option>
@@ -84,8 +51,8 @@
 							<option value="5">EXTERNO</option>
 						</select>
 					</span>
-					<span id="wrapper_buscar">
-						<button name="siguiente"  id="siguiente" onclick="location.href='mantenedor_proyectos.html'" style="position: absolute;">Siguiente</button>
+					<span id="wrapper_siguiente">
+						<button name="siguiente"  id="siguiente" onclick="location.href='mantenedor_proyectos.html'">Siguiente</button>
 					</span>
 				</td>
 			<tr>

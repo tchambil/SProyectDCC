@@ -61,7 +61,7 @@ html, body {
 
 #menu_lateral {
 	width: 200px;
-	padding-bottom: 100px;;
+	padding-bottom: 160px;
 	float: left;
 	margin-right: 50px;
 	padding-top: 50px;
@@ -137,21 +137,12 @@ html, body {
 	Desde aquí posiciono los wrappers para cada campo.
 
 */
-#wrapper_notificacion {
-	border: 1px solid orange;
-	padding: 10px;
-	margin: 0px 0px 30px 0px;
-	width: 280px;
-	color: orange;
-	background: rgb(255,255,136); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(255,255,136,1) 0%, rgba(255,255,249,1) 66%, rgba(255,255,249,1) 66%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,136,1)), color-stop(66%,rgba(255,255,249,1)), color-stop(66%,rgba(255,255,249,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#fffff9',GradientType=0 );
+#busqueda_rapida{
+	border: 1px solid black;
+	height: 80px; 
+	padding: 10px 0px 10px 10px;
 }
+
 #wrapper_desde {
 	float: left;
 	padding: 0px 0px 10px 0px;
@@ -163,7 +154,7 @@ html, body {
 
 #wrapper_hasta {
 	float: left;
-	margin-left: 95px;
+	margin-left: 30px;
 }
 
 #wrapper_hasta input {
@@ -171,39 +162,47 @@ html, body {
 }
 
 #wrapper_tipo {
-	padding-top: 40px;
 	margin-right: 20px;
 	width: 100px;
+	float:left; 
+	padding-top: 0px;
+	margin-left: 30px;
 }
 
 #wrapper_tipo input {
 	width: 100%;
 }
 
-#wrapper_tituloproy {
-	padding-top: 40px;
-	margin-right: 20px;
-	width: 300px;
-}
-
-#wrapper_tituloproy input {
-	width: 100%;
-}
-
-#wrapper_investigador {
-	padding-top: 40px;
-	margin-right: 20px;
-	width: 300px;
-}
-
-#wrapper_investigador input {
-	width: 100%;
-}
-
 #wrapper_buscar {
 	padding-top: 20px;
 	margin-right: 20px;
+	float: left;
+	margin-top:-20px
 }
+
+#publicaciones {
+	border: 1px solid black;
+	padding: 10px 0px 10px 10px;
+	margin-top: 30px;
+}
+
+#tabla {
+	font-family: 'HelveticaNeue', Arial;
+	font-size: 14px;
+}
+
+#p1 {
+	width: 100px;
+}
+
+#p2 {
+	width: 200px;
+}
+
+#p3 {
+	width: 20px;
+}
+
 #contenido button {
 	font-family: 'HelveticaNeue';
 	font-size: 15px;

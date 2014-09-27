@@ -3,16 +3,20 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>U-Proyectos</title>
-		<link href="mantenedor_proyectos.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
-		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
-		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
-		<script src="select2-3.5.1/select2.js"></script>
-		<script src="select2-3.5.1/select2_locale_es.js"></script>
-		<link href="select2-3.5.1/select2.css" rel="stylesheet"/>
+		<link href="css/mantenedor_proyectos.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="js/select2-3.5.1/select2.js"></script>
+		<script src="js/select2-3.5.1/select2_locale_es.js"></script>
+		<link href="js/select2-3.5.1/select2.css" rel="stylesheet"/>
 		<script>
+			$.get( "ingresar.html", function( data ) {
+				$( ".result" ).html( data );
+				alert( "Load was performed." );
+			});
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',

@@ -3,15 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>U-Proyectos</title>
-		<link href="buscar.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
-		<link href="jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
-		<script src="jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
-		<script src="jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
-		<script src="select2-3.5.1/select2.js"></script>
-		<script src="select2-3.5.1/select2_locale_es.js"></script>
+		<link href="css/buscar.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
 		<script>
+			var first = true;
+			function autoClear(){
+				if(first){
+					$("#investigador").val("");
+					first = false;
+				}
+			}
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
@@ -40,16 +46,9 @@
 					var alto_contenido = $("#contenido").height();
 					$("#menu_lateral").height(alto_contenido - 127	);
 					
-					var alto_titulo = $("#titulo").height();
-					$("#estado").height(alto_titulo);
-					
 					/* Fijo los datepicker de jQuery UI. */
 					$( "#desde" ).datepicker();
 					$( "#hasta" ).datepicker();
-					
-					/* Fijo los selects customizados para datos dinámicos. */
-					$("#responsables").select2({width:606});
-					$("#participantes").select2({width:606});
 				}
 			);
 		</script>
@@ -101,9 +100,9 @@
 					</span>
 					<span id="wrapper_investigador">
 						<label for="investigador" id="label_investigador">Nombre del Investigador</label>
-						<input type="text" name="investigador"  id="investigador"/><label style="font-size: 11px;">Ejemplo: Jorge Pérez</label>
+						<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" onclick="autoClear();"/>
 					</span>
-					<span id="wrapper_buscar">
+					<span id="wrapper_buscar" style="padding-top: 30px; padding-bottom: 30px">
 						<button name="buscar"  id="buscar">Buscar</button>
 					</span>
 				</td>
