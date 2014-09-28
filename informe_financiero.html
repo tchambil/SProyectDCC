@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="css/informe_financiero.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script>
+			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
+			$.datepicker.regional['es'] = {
+				 closeText: 'Cerrar',
+				 prevText: '<Ant',
+				 nextText: 'Sig>',
+				 currentText: 'Hoy',
+				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+				 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+				 weekHeader: 'Sm',
+				 dateFormat: 'dd/mm/yy',
+				 firstDay: 1,
+				 isRTL: false,
+				 showMonthAfterYear: false,
+				 yearSuffix: ''
+			 };
+			$.datepicker.setDefaults($.datepicker.regional['es']);
+			
+			$("input[type=button], button").button();
+			
+			$(document).ready(
+				function() {
+					/* Fijo los datepicker de jQuery UI. */
+					$("#fecha").datepicker();
+					
+					/* Marco todos los campos requeridos con un asterisco. */
+					$(".required").append("<div class='marca_obligatorios'>*</div>");
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<a href="index.html"><img id="logo" src="logo.png" alt="logo" /></a>
+			<div id="login">
+				<p><img id="llave_login" src="llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<table>
+			<tr>
+				<td id="menu_lateral">
+					<a href="buscar.html">Buscar Proyecto</a>
+					<a href="ingresar.html">Ingresar Proyecto</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
+					<a href="informe_financiero.html">Informe Financiero</a>
+					<a href="#">Estadísticas</a>
+				</td>
+				<td id="contenido">
+					<h1>Ingresos Pendientes</h1>
+					<span class="proyectos">
+						<h2 class="wrapper_ptitulo">Proyectos con Depósitos Pendientes</h2>
+						<span class="wrapper_ptabla">
+						<table>
+							<tr class="border-up">
+								<td class="np"><label>1.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 1</a></td>
+								<td></td><td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda">
+									<button>Notificar Responsable</button>
+								</td>
+							</tr>
+							</span>
+							<tr class="border-up">
+								<td class="np"><label>2.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 2</a></td>
+								<td></td><td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda">
+									<button>Notificar Responsable</button>
+								</td>
+							</tr>
+							<tr class="border-up">
+								<td class="np"><label>3.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 3</a></td>
+								<td></td><td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda">
+									<button>Notificar Responsable</button>
+								</td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="extbutton">
+						<button>Notificar Todos</button>
+					</span>
+					<span class="proyectos">
+						<h2 class="wrapper_ptitulo">Cobros Pendientes a la Escuela</h2>
+						<span class="wrapper_ptabla">
+						<table>
+							<tr class="border-up">
+								<td class="np"><label>1.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 1</a></td>
+								<td></td>
+								<td>
+									<label>Monto a Cobrar: $2.000.000</label>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td></td>
+							</tr>
+							</span>
+							<tr class="border-up">
+								<td class="np"><label>2.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 2</label></td>
+								<td></td><
+								<td>
+									<label>Monto a Cobrar: $2.000.000</label>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td></td>
+							</tr>
+							<tr class="border-up">
+								<td class="np"><label>3.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 3</label></td>
+								<td></td>
+								<td>
+									<label>Monto a Cobrar: $2.000.000</label>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td></td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="extbutton">
+						<button>Exportar</button>
+					</span>
+				</td>
+			<tr>
+		</table>
+		<footer id="footer_pagina">
+		</footer>
+    </body>
+</html>
