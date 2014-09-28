@@ -62,7 +62,7 @@ html, body {
 
 #menu_lateral {
 	width: 200px;
-	padding-bottom: 443px;
+	padding-bottom: 530px;
 	float: left;
 	margin-right: 50px;
 	padding-top: 50px;
@@ -156,12 +156,17 @@ html, body {
 
 .np{
 	padding: 10px;
-	width: 10%;
+	width: 5%;
 }
 
 .celda {
 	padding: 10px;
 	width: 30%;
+}
+
+.celda2 {
+	width: 35%;
+	padding: 10px;
 }
 
 .border-up {
