@@ -62,7 +62,7 @@ html, body {
 
 #menu_lateral {
 	width: 200px;
-	padding-bottom: 160px;
+	padding-bottom: 530px;
 	float: left;
 	margin-right: 50px;
 	padding-top: 50px;
@@ -108,7 +108,6 @@ html, body {
 
 #contenido h2 {
 	font-size: 18px;
-	margin-bottom: 15px;
 }
 
 #contenido h3 {
@@ -141,93 +140,57 @@ html, body {
 	display: block;
 }
 
-/*
-
-	Desde aquí posiciono los wrappers para cada campo.
-
-*/
-#busqueda_rapida{
+.proyectos {
+	width: 600px;
 	border: 1px solid #919AD5;
-	height: 80px; 
-	padding: 10px 0px 10px 10px;
 }
 
-#wrapper_desde {
-	float: left;
-	padding: 0px 0px 10px 0px;
+.wrapper_ptitulo {
+	padding: 10px;
 }
 
-#wrapper_desde input {
-	width: 100px;
+.wrapper_ptabla {
+	height: 255px;
 }
 
-#wrapper_hasta {
-	float: left;
-	margin-left: 30px;
+.np{
+	padding: 10px;
+	width: 5%;
 }
 
-#wrapper_hasta input {
-	width: 100px;
+.celda {
+	padding: 10px;
+	width: 30%;
 }
 
-#wrapper_tipo {
-	margin-right: 20px;
-	width: 100px;
-	float:left; 
-	padding-top: 0px;
-	margin-left: 30px;
-}
-
-#wrapper_tipo input {
-	width: 100%;
-}
-
-#wrapper_buscar {
-	padding-top: 20px;
-	margin-right: 20px;
-	float: left;
-	margin-top:-20px
-}
-
-#publicaciones {
-	border: 1px solid #919AD5;
-	padding: 10px 0px 0px 10px;
-	margin-top: 30px;
-}
-
-#tabla {
-	font-family: 'HelveticaNeue', Arial;
-	font-size: 14px;
-	width: 500px;
-}
-
-.p1 {
-	width: 25%;
-	padding-top: 10px;
-}
-
-.p2 {
-	width: 50%;
-}
-
-.p3 {
-	width: 25%;
-}
-
-.p4 {
-	padding-bottom: 10px;
+.celda2 {
+	width: 35%;
+	padding: 10px;
 }
 
 .border-up {
 	border-top: 1px solid #919AD5;
 }
 
+.extbutton{
+	margin: 30px 0px 30px 400px;
+}
+
+.proyecto_link {
+	font-family: 'HelveticaNeue';
+	font-size: 13px;
+}
+
+.paginado {
+	border-top: 1px solid #919AD5;
+	text-align: center;
+}
+
 #contenido button {
 	font-family: 'HelveticaNeue';
 	font-size: 15px;
-	width: 100px;
+	width: 200px;
 	height: 30px;
-	margin-top: 10px;
 	vertical-align: top;
 	background: #919ad5; /* Old browsers */
 	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */

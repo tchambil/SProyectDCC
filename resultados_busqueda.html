@@ -1,23 +1,15 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>U-Proyectos</title>
-		<link href="css/buscar.css" rel="stylesheet"/>
+		<link href="css/resultados_busqueda.css" rel="stylesheet"/>
 		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
 		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
 		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
 		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		<script>
-			var first = true;
-			function autoClear(){
-				if(first){
-					$("#investigador").val("");
-					$("#investigador").css('color', 'black');
-					first = false;
-				}
-			}
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
@@ -41,14 +33,10 @@
 			$("input[type=button], button").button();
 			
 			$(document).ready(
-				function() {					
-					/* Aquí ajusto la altura del menú lateral. */
-					var alto_contenido = $("#contenido").height();
-					$("#menu_lateral").height(alto_contenido - 127	);
-					
+				function() {
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#desde" ).datepicker();
-					$( "#hasta" ).datepicker();
+					$("#fecha").datepicker();
+					
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
 				}
@@ -73,39 +61,63 @@
 					<a href="#">Estadísticas</a>
 				</td>
 				<td id="contenido">
-					<h1>Buscar Proyectos</h1>
-					<span id="wrapper_notificacion">
-						<label id="notificacion">Área de notificación</label>
+					<span class="extbutton">
+						<button>Exportar Resultados</button>
 					</span>
-					<span id="wrapper_desde">
-						<label for="desde" id="label_desde">Desde</label>
-						<input type="text" name="desde" id="desde" />
-					</span>
-					<span id="wrapper_hasta">
-						<label for="hasta" id="label_hasta">Hasta</label>
-						<input type="text" name="hasta"  id="hasta"/>
-					</span>
-					<span id="wrapper_tipo">
-						<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
-						<select name="tipo" id="tipo">
-							<option value="0">Tipo...</option>
-							<option value="1">FONDECYT</option>
-							<option value="2">FONDEF</option>
-							<option value="3">MILENIO</option>
-							<option value="4">ANILLO</option>
-							<option value="5">EXTERNO</option>
-						</select>
-					</span>
-					<span id="wrapper_tituloproy">
-						<label for="tituloproy" id="label_tituloproy">Título del Proyecto</label>
-						<input type="text" name="tituloproy"  id="tituloproy"/>
-					</span>
-					<span id="wrapper_investigador">
-						<label for="investigador" id="label_investigador">Nombre del Investigador</label>
-						<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" style="color: #BDBDBD;" onclick="autoClear();"/>
-					</span>
-					<span id="wrapper_buscar" style="padding-top: 30px; padding-bottom: 30px">
-						<button name="buscar"  id="buscar" onclick="location.href='resultados_busqueda.html'">Buscar</button>
+					<span class="proyectos">
+						<h2 class="wrapper_ptitulo">Resultados Búsqueda</h2>
+						<span class="wrapper_ptabla">
+						<table>
+							<tr class="border-up">
+								<td class="np"><label>1.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 1</a></td>
+								<td></td>
+								<td class="celda2">
+									<a href="#" class="proyecto_link">+ Modificar</a>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda2"><a href="#" class="proyecto_link">+ Eliminar</a></td>
+							</tr>
+							<tr class="border-up">
+								<td class="np"><label>2.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 2</label></td>
+								<td></td>
+								<td class="celda2">
+									<a href="#" class="proyecto_link">+ Modificar</a>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda2"><a href="#" class="proyecto_link">+ Eliminar</a></td>
+							</tr>
+							<tr class="border-up">
+								<td class="np"><label>3.</label></td>
+								<td class="celda"><a href="#" class="proyecto_link">Proyecto 3</label></td>
+								<td></td>
+								<td class="celda2">
+									<a href="#" class="proyecto_link">+ Modificar</a>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class="celda"><label>Dato 1: dato1</label></td>
+								<td class="celda"><label>Dato 2: dato2</label></td>
+								<td class="celda2"><a href="#" class="proyecto_link">+ Eliminar</a></td>
+							</tr>
+						</table>
+						<span class="paginado">
+							<a href="#" class="proyecto_link">1</a>|
+							<a href="#" class="proyecto_link">2</a>|
+							<a href="#" class="proyecto_link">3</a>|
+							<a href="#" class="proyecto_link">4</a>
+						</span>
+						</span>
 					</span>
 				</td>
 			<tr>

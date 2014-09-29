@@ -66,7 +66,7 @@
 				</td>
 				<td id="contenido">
 					<h1 style="text-align:center;">Bienvenido!</h1>
-					<div id="busqueda_rapida">
+					<span id="busqueda_rapida">
 						<h2>Búsqueda Rápida</h2>
 						<span id="wrapper_desde">
 							<label for="desde" id="label_desde">Desde</label>
@@ -88,43 +88,44 @@
 							</select>
 						</span>
 						<span id="wrapper_buscar">
-							<button name="buscar"  id="buscar">Buscar</button>
+							<button name="buscar"  id="buscar" onclick="location.href='resultados_busqueda.html'">Buscar</button>
 						</span>
-					</div>
-					<div id="publicaciones">
+					</span>
+					<span id="publicaciones">
 						<h2>Últimas Publicaciones</h2>
 						<table id="tabla">
-							<tr>
-								<td id="p1"><h3>Proyecto 1</h3></td>
-								<td id="p2">
-									<label>Responsable: Sergio Ochoa</label>
-									<label>Tipo: FONDEF</label>
-									<label>Periodo: 2014 - 2016</label>
-								</td>
-								<td id="p3">
-									<a href="#">Modificar</a>
-									<div/>
-									<a href="#">Eliminar</a>
-									<div/>
-									<a href="#">Más Info...</a>
-								</td>
+							<tr class="border-up">
+								<td class="p1"><label>Proyecto 1</label></td>
+								<td class="p2"><label>Responsable: Sergio Ochoa</label></td>
+								<td class="p3"><a href="#"><label>+ Modificar</label></a><td>
 							</tr>
 							<tr>
-								<td><h3>Proyecto 2</h3></td>
-								<td>
-									<label>Responsable: Jorge Pérez</label>
-									<label>Tipo: FONDECYT</label>
-									<label>Periodo: 2014 - 2016</label>
-								</td>
-								<td>
-									<a href="#">Modificar</a>
-									<a href="#">Eliminar</a>
-									<div/>
-									<a href="#">Más Info...</a>
-								</td>
+								<td></td>
+								<td><label>Tipo: FONDEF</label></td>
+								<td><a href="#"><label>+ Eliminar</label></a></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><label>Periodo: 2014 - 2016</label></td>
+								<td class="p4"><a href="#"><label>+ Más Info...</label></a></td>
+							</tr>
+							<tr class="border-up">
+								<td class="p1"><label>Proyecto 2</label></td>
+								<td class="p2"><label>Responsable: Jorge Pérez</label></td>
+								<td class="p3"><a href="#"><label>+ Modificar</label></a></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><label>Tipo: FONDECYT</label></td>
+								<td><a href="#"><label>+ Eliminar</label></a></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td><label>Periodo: 2014 - 2016</label></td>
+								<td class="p4"><a href="#"><label>+ Más Info...</label></a></td>
 							</tr>
 						</table>
-					</div>
+					</span>
 				</td>
 			<tr>
 		</table>

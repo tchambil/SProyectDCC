@@ -163,7 +163,7 @@ html, body {
 
 #proyecto {
 	width: 400px;
-	border: 1px solid black;
+	border: 1px solid #919AD5;
 	margin-bottom: 30px;
 }
 
@@ -190,7 +190,7 @@ html, body {
 #datos_deposito {
 	margin-bottom: 20px;
 	width: 400px;
-	border: 1px solid black;
+	border: 1px solid #919AD5;
 }
 
 #wrapper_dtitulo {
