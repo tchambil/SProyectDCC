@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="css/estadisticas.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="js/select2-3.5.1/select2.js"></script>
+		<script src="js/select2-3.5.1/select2_locale_es.js"></script>
+		<link href="js/select2-3.5.1/select2.css" rel="stylesheet"/>
+		<script>
+			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
+			$.datepicker.regional['es'] = {
+				 closeText: 'Cerrar',
+				 prevText: '<Ant',
+				 nextText: 'Sig>',
+				 currentText: 'Hoy',
+				 monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+				 monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+				 dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+				 dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+				 dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+				 weekHeader: 'Sm',
+				 dateFormat: 'dd/mm/yy',
+				 firstDay: 1,
+				 isRTL: false,
+				 showMonthAfterYear: false,
+				 yearSuffix: ''
+			 };
+			$.datepicker.setDefaults($.datepicker.regional['es']);
+			
+			$( "input[type=button], button").button();
+			
+			$(document).ready(
+				function() {					
+					/* Aquí ajusto la altura del menú lateral. */
+					var alto_contenido = $("#contenido").height();
+					$("#menu_lateral").height(alto_contenido - 127	);
+					
+					$("#directores").select2({width:620});
+					
+					/* Fijo los datepicker de jQuery UI. */
+					$( "#desde" ).datepicker();
+					$( "#hasta" ).datepicker();
+					/* Marco todos los campos requeridos con un asterisco. */
+					$(".required").append("<div class='marca_obligatorios'>*</div>");
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<a href="index.html"><img id="logo" src="logo.png" alt="logo" /></a>
+			<div id="login">
+				<p><img id="llave_login" src="llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<table>
+			<tr>
+				<td id="menu_lateral">
+					<a href="buscar.html">Buscar Proyecto</a>
+					<a href="ingresar.html">Ingresar Proyecto</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
+					<a href="informe_financiero.html">Informe Financiero</a>
+					<a href="estadisticas.html">Estadísticas</a>
+				</td>
+				<td id="contenido">
+					<h1>Estadísticas</h1>
+					<span id="wrappers_params">
+						<span id="wrapper_directores">
+							<label for="directores" id="label_directores">Seleccionar Académico</label>
+							<select multiple id="directores">
+								<option value="AL">Pablo Barceló</option>
+								<option value="AL2">Alejandro Hevia</option>
+								<option value="AL3">Gonzalo Navarro</option>
+								<option value="AL4">Luis Mateu</option>
+								<option value="WY">Eric Tánter</option>
+								<option value="WYX">Miguela Ñoquis</option>
+							</select>
+						</span>
+						<span id="wrapper_desde">
+							<label for="desde" id="label_desde">Desde</label>
+							<input type="text" name="desde" id="desde" />
+						</span>
+						<span id="wrapper_hasta">
+							<label for="hasta" id="label_hasta">Hasta</label>
+							<input type="text" name="hasta"  id="hasta"/>
+						</span>
+						<span id="wrapper_tipo">
+							<label for="tipo" id="label_tipo">Tipo</label>
+							<select name="tipo" id="tipo">
+								<option value="0">Tipo...</option>
+								<option value="1">FONDECYT</option>
+								<option value="2">FONDEF</option>
+								<option value="3">MILENIO</option>
+								<option value="4">ANILLO</option>
+								<option value="5">EXTERNO</option>
+							</select>
+						</span>
+					</span>
+					<span id="wrapper_botones">
+						<button id="mostrar" onclick="location.href='#'">Mostrar</button>
+						<button id="exportar" style="margin-left: 15px;" onclick="location.href='#'">Exportar</button>
+					</span>
+					<span id="graficos">
+						<table id="tabla">
+							<tr>
+								<td class="cat_año"><label>FONDEF</label></td>
+								<td class="año"><label>2010</label></td>
+								<td class="año"><label>2011</label></td>
+								<td class="año"><label>2012</label></td>
+								<td class="año"><label>2013</label></td>
+								<td class="año"><label>Total</label></td>
+							</tr>
+							<tr>
+								<td class="cat"><label>Cantidad de Proyectos</label></td>
+								<td class="num"><label>3</label></td>
+								<td class="num"><label>2</label></td>
+								<td class="num"><label>5</label></td>
+								<td class="num"><label>7</label></td>
+								<td class="num"><label>17</label></td>
+							</tr>
+							<tr>
+								<td class="cat"><label>Montos Totales Asignados</label></td>
+								<td class="num"><label>50.000.000</label></td>
+								<td class="num"><label>70.000.000</label></td>
+								<td class="num"><label>70.000.000</label></td>
+								<td class="num"><label>60.000.000</label></td>
+								<td class="num"><label>250.000.000</label></td>
+							</tr>
+							<tr>
+								<td class="cat"><label>Montos Totales DCC</label></td>
+								<td class="num"><label>10.000.000</label></td>
+								<td class="num"><label>14.000.000</label></td>
+								<td class="num"><label>14.000.000</label></td>
+								<td class="num"><label>12.000.000</label></td>
+								<td class="num"><label>50.000.000</label></td>
+							</tr>
+							<tr>
+								<td class="cat"><label>Ingresos (Peaje) DCC</label></td>
+								<td class="num"><label>1.000.000</label></td>
+								<td class="num"><label>1.400.000</label></td>
+								<td class="num"><label>1.400.000</label></td>
+								<td class="num"><label>1.200.000</label></td>
+								<td class="num"><label>5.000.000</label></td>
+							</tr>
+						</table>
+						<span id="charts">
+							<img id="chart1" src="chart1.png" alt="chart1" />
+							<img id="chart2" src="chart2.png" alt="chart2" />
+						</span>
+					</span>
+				</td>
+			<tr>
+		</table>
+		<footer id="footer_pagina">
+		</footer>
+    </body>
+</html>

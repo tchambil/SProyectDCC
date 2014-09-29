@@ -62,7 +62,7 @@ html, body {
 
 #menu_lateral {
 	width: 200px;
-	padding-bottom: 530px;
+	padding-bottom: 480px;
 	float: left;
 	margin-right: 50px;
 	padding-top: 50px;
@@ -150,17 +150,18 @@ html, body {
 }
 
 .wrapper_ptabla {
-	height: 200px;
+	height: 165px;
 	overflow-y: scroll;
 }
 
 .np{
-	padding: 10px;
+	padding: 10px 10px 0px 10px;
 	width: 5%;
 }
 
 .celda {
-	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	width: 30%;
 }
 
