@@ -1,0 +1,223 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="css/mostrar_proyecto.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="js/select2-3.5.1/select2.js"></script>
+		<script src="js/select2-3.5.1/select2_locale_es.js"></script>
+		<link href="js/select2-3.5.1/select2.css" rel="stylesheet"/>
+		<script>
+			$("input[type=button], button").button();
+			
+			$(document).ready(
+				function() {
+					
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<a href="index.html"><img id="logo" src="img/logo.png" alt="logo" /></a>
+			<div id="login">
+				<p><img id="llave_login" src="img/llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<table>
+			<tr>
+				<td id="menu_lateral">
+					<a href="buscar.html">Buscar Proyecto</a>
+					<a href="ingresar.html">Ingresar Proyecto</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
+					<a href="informe_financiero.html">Informe Financiero</a>
+					<a href="estadisticas.html">Estadísticas</a>
+				</td>
+				<td id="contenido">
+					<h1>Proyecto 1</h1>
+					<span class="proyectos">
+						<h2 class="wrapper_ptitulo">Información Básica</h2>
+						<span id="tabla" class="wrapper_tabla">
+						<table>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">Tipo</label></td>
+											<td><label>ANILLO</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Identificador</label></td>
+											<td><label>1234567</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Director</label></td>
+											<td><label>Sergio Ochoa</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Sub-Director</label></td>
+											<td><label>Eric Tanter</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Estado Actual</label></td>
+											<td><label>Activo</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Período</label></td>
+											<td><label>2013 - 2015</label></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td style="width: 40%"><label style="color: DodgerBlue;">Investigador(es) Principal(es)</label></td>
+											<td>
+												<table style="margin-top: 10px; ">
+													<tr><td style="padding-top: 10px; padding-left: 10px;"><label>Investigador 1</label></td></tr>
+													<tr><td style="padding-left: 10px;"><label>Investigador 2</label></td></tr>
+													<tr><td style="padding-left: 10px;"><label>Investigador 3</label></td></tr>
+												</table>
+											</td>
+									</table>
+								</td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="proyectos" style="margin-top: 30px;">
+						<h2 class="wrapper_ptitulo">Información Adicional</h2>
+						<span id="tabla" class="wrapper_tabla">
+						<table>
+							<tr>
+								<td style="padding-bottom: 5px; width: 40%"><label style="color: DodgerBlue;">Descripción del Proyecto</label></td>
+								<td><label style="line-height: 20px">Aquí va la descripción del proyecto 1. Continúa la descripción del proyecto 1 de tipo ANILLO.</label></td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="proyectos" style="margin-top: 30px;">
+						<h2 class="wrapper_ptitulo">Información Administrativa</h2>
+						<span id="tabla" class="wrapper_tabla">
+						<table>
+							<tr>
+								<td style="width: 35%;"><label style="color: DodgerBlue;">Empresa Cliente</label></td>
+								<td><label>Banco de Chile</label></td>
+							</tr>
+							<tr>
+								<td><label style="color: DodgerBlue;">Nombre Contacto</label></td>
+								<td><label>Juan González</label></td>
+							</tr>
+							<tr>
+								<td><label style="color: DodgerBlue;">Teléfono Contacto</label></td>
+								<td><label>23452345</label></td>
+							</tr>
+							<tr>
+								<td><label style="color: DodgerBlue;">E-Mail Contacto</label></td>
+								<td><label>jgonzalez@bancodechile.cl</label></td>
+							</tr>
+							<tr>
+								<td><label style="color: DodgerBlue;">Unidad Ejecutora</label></td>
+								<td><label>U1</label></td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="proyectos" style="margin-top: 30px; margin-bottom: 30px;">
+						<h2 class="wrapper_ptitulo">Información Financiera</h2>
+						<span id="tabla" class="wrapper_tabla">
+						<table>
+							<tr>
+								<td style="width: 300px; height: 100px; border-right: 1px solid #919AD5; border-bottom: 1px solid #919AD5; padding:10px;">
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">Organismo que Financia</label></td>
+											<td><label>Fondecyt</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px; width: 70%;"><label style="color: DodgerBlue;">Monto Total del Proyecto</label></td>
+											<td style="padding-top: 10px;"><label>$30.000.000</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px;"><label style="color: DodgerBlue;">Monto para Administración</label></td>
+											<td style="padding-top: 10px;"><label>$5.000.000</label></td>
+										</tr>
+									</table>
+								</td>
+								<td style="width: 300px; height: 100px; border-bottom: 1px solid #919AD5; padding:10px;">
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">Peaje DCC</label></td>
+											<td><label>10%</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px; width: 70%;"><label style="color: DodgerBlue;">Peaje Casa Central y Facultad</label></td>
+											<td style="padding-top: 10px;"><label>12%</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px;"><label style="color: DodgerBlue;">Monto DCC</label></td>
+											<td style="padding-top: 10px;"><label>$500.000</label></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td style="width: 300px; height: 100px; border-right: 1px solid #919AD5; border-right: 1px solid #919AD5; padding:10px;">
+									<label style="color: DodgerBlue; padding-bottom: 45px;">Monto de Financiamiento por Período</label>
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">2013</label></td>
+											<td><label>$10.000.000</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px; width: 40%;"><label style="color: DodgerBlue;">2014</label></td>
+											<td style="padding-top: 10px;"><label>$10.000.000</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px;"><label style="color: DodgerBlue;">2015</label></td>
+											<td style="padding-top: 10px;"><label>$10.000.000</label></td>
+										</tr>
+									</table>
+								</td>
+								<td style="width: 300px; height: 100px; padding:10px;">
+									<label style="color: DodgerBlue; padding-bottom: 10px;">Monto para Administración por Período</label>
+									<table>
+										<tr>
+											<td></td>
+											<td><label style="color: DodgerBlue;">Previsto</label></td>
+											<td><label style="color: DodgerBlue;">Recaudado</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px; width: 30%;"><label style="color: DodgerBlue;">2013</label></td>
+											<td style="padding-top: 10px;"><label>$1.000.000</label></td>
+											<td style="padding-top: 10px;"><label>$1.000.000</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px;"><label style="color: DodgerBlue;">2014</label></td>
+											<td style="padding-top: 10px;"><label>$2.000.000</label></td>
+											<td style="padding-top: 10px;"><label>$1.500.000</label></td>
+										</tr>
+										<tr>
+											<td style="padding-top: 10px;"><label style="color: DodgerBlue;">2014</label></td>
+											<td style="padding-top: 10px;"><label>$2.000.000</label></td>
+											<td style="padding-top: 10px;"><label>$0</label></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						</span>
+					</span>
+				</td>
+			<tr>
+		</table>
+		<footer id="footer_pagina">
+		</footer>
+    </body>
+</html>
