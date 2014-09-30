@@ -1,0 +1,247 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>U-Proyectos</title>
+		<link href="css/marcar_recuperados.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css" rel="stylesheet"/>
+		<link href="js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css" rel="stylesheet"/>
+		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
+		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
+		<script src="js/select2-3.5.1/select2.js"></script>
+		<script src="js/select2-3.5.1/select2_locale_es.js"></script>
+		<link href="js/select2-3.5.1/select2.css" rel="stylesheet"/>
+		<script>
+			$("input[type=button], button").button();
+			
+			$(document).ready(
+				function() {
+					
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<header id="header_pagina">
+			<a href="index.html"><img id="logo" src="img/logo.png" alt="logo" /></a>
+			<div id="login">
+				<p><img id="llave_login" src="img/llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
+				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+			</div>
+		</header>
+		<table>
+			<tr>
+				<td id="menu_lateral">
+					<a href="buscar.html">Buscar Proyecto</a>
+					<a href="ingresar.html">Ingresar Proyecto</a>
+					<a href="declarar_deposito.html">Declarar Depósito</a>
+					<a href="informe_financiero.html">Informe Financiero</a>
+					<a href="estadisticas.html">Estadísticas</a>
+				</td>
+				<td id="contenido">
+					<h1>Marcar Recuperados</h1>
+					<button style="position: absolute; margin-left: 400px; margin-top: -60px;">Guardar</button>
+					<span class="proyectos">
+						<h2 class="wrapper_ptitulo">Información Básica</h2>
+						<span id="tabla" class="wrapper_tabla">
+						<table>
+							<tr>
+								<td>
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">Tipo</label></td>
+											<td><label>FONDECYT</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Identificador</label></td>
+											<td><label>1234567</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Título</label></td>
+											<td><label>Proyecto 1</label></td>
+										</tr>
+									</table>
+								</td>
+								<td>
+									<table>
+										<tr>
+											<td><label style="color: DodgerBlue;">Investigador Principal</label></td>
+											<td><label>Sergio Ochoa</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Co-Investigador(es)</label></td>
+											<td><label>Eric Tanter</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Estado Actual</label></td>
+											<td><label>Activo</label></td>
+										</tr>
+										<tr>
+											<td><label style="color: DodgerBlue;">Período</label></td>
+											<td><label>2013 - 2015</label></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						</span>
+					</span>
+					<span class="proyectos" style="margin-top: 30px; margin-bottom: 30px;">
+						<h2 class="wrapper_ptitulo">Información Financiera</h2>
+						<label style="color: DodgerBlue; padding: 0px 0px 10px 10px;">Monto por Período</label>
+						<span id="tabla" class="wrapper_tabla">
+						<table style="border: 1px solid #919AD5;">
+							<tr>
+								<td style="text-align: center"><label>Estado</label></td>
+								<td style="text-align: center"><label>Año</label></td>
+								<td style="text-align: center"><label>Monto Total Esperado</label></td>
+								<td style="text-align: center"><label>Banco</label></td>
+								<td style="text-align: center"><label>N° Cuenta</label></td>
+								<td style="text-align: center"><label>N° Depósito</label></td>
+								<td style="text-align: center"><label>Fecha</label></td>
+								<td style="text-align: center"><label>Monto Depósito</label></td>
+								<td style="text-align: center"><label>Monto Recaudado</label></td>
+							</tr>
+							<tr>
+								<td style="border-top: 1px solid #919AD5;"><input style="margin-left: 20px;" type="checkbox"/></td>
+								<td style="border-top: 1px solid #919AD5;"><label style="color: DodgerBlue;">2012</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$10.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>Santander</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>654321</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>123456</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>16/02/2013</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$2.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$200.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><label>Santander</label></td>
+								<td><label>654321</label></td>
+								<td><label>456823</label></td>
+								<td><label>26/05/2013</label></td>
+								<td><label>$5.000.000</label></td>
+								<td><label>$500.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><label>Santander</label></td>
+								<td><label>654321</label></td>
+								<td><label>555645</label></td>
+								<td><label>24/08/2013</label></td>
+								<td><label>$3.000.000</label></td>
+								<td><label>$300.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td style="border-top: 1px solid #919AD5;"><label>Sub-Total</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$10.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$1.000.000</label></td>
+							</tr>
+							<tr>
+								<td style="border-top: 1px solid #919AD5;"><input style="margin-left: 20px;" type="checkbox"/></td>
+								<td style="border-top: 1px solid #919AD5;"><label style="color: DodgerBlue;">2013</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$10.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>Santander</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>654321</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>666664</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>16/02/2014</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$4.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$400.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><label>Santander</label></td>
+								<td><label>654321</label></td>
+								<td><label>777776</label></td>
+								<td><label>26/05/2014</label></td>
+								<td><label>$4.000.000</label></td>
+								<td><label>$400.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td><label>Santander</label></td>
+								<td><label>654321</label></td>
+								<td><label>888887</label></td>
+								<td><label>24/08/2014</label></td>
+								<td><label>$2.000.000</label></td>
+								<td><label>$200.000</label></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td style="border-top: 1px solid #919AD5;"><label>Sub-Total</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$10.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$1.000.000</label></td>
+							</tr>
+							<tr>
+								<td style="border-top: 1px solid #919AD5;"><input style="margin-left: 20px;" type="checkbox"/></td>
+								<td style="border-top: 1px solid #919AD5;"><label style="color: DodgerBlue;">2014</label></td>
+								<td style="border-top: 1px solid #919AD5;"><label>$10.000.000</label></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td style="border-top: 1px solid #919AD5;"><label>Sub-Total</label></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+								<td style="border-top: 1px solid #919AD5;"></td>
+							</tr>
+						</table>
+						</span>
+					</span>
+				</td>
+			<tr>
+		</table>
+		<footer id="footer_pagina">
+		</footer>
+    </body>
+</html>
