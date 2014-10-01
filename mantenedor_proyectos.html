@@ -58,9 +58,9 @@
 					$( "#fecha_termino" ).datepicker({changeYear: true});
 					
 					/* Fijo los selects customizados para datos dinámicos. */
-					$("#directores").select2({width:606});
-					$("#subdirectores").select2({width:606});
-					$("#investigadores_principales").select2({width:606});
+					$("#directores").select2({width:506});
+					$("#subdirectores").select2({width:506});
+					$("#investigadores_principales").select2({width:506});
 					
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
@@ -131,6 +131,7 @@
 						<option value="WY">Eric Tánter</option>
 						<option value="WYX">Miguela Ñoquis</option>
 					</select>
+					<button style="width: 100px; height: 30px;">Nuevo</button>
 				</span>
 				<span id="wrapper_subdirectores">
 					<label for="subdirectores" id="label_subdirectores" class="required">Subdirector(es)</label>
@@ -142,6 +143,7 @@
 						<option value="WY">Eric Tánter</option>
 						<option value="WYX">Miguela Ñoquis</option>
 					</select>
+					<button style="width: 100px; height: 30px;">Nuevo</button>
 				</span>
 				<span id="wrapper_investigadores_principales">
 					<label for="investigadores_principales" id="label_investigadores_principales" class="required">Investigador(es) Principal(es)</label>
@@ -153,6 +155,7 @@
 						<option value="WY">Eric Tánter</option>
 						<option value="WYX">Miguela Ñoquis</option>
 					</select>
+					<button style="width: 100px; height: 30px;">Nuevo</button>
 				</span>
 			</section>
 			<section>

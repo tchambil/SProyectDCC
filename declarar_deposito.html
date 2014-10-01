@@ -10,6 +10,18 @@
 		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		<script>
+			$(function() {
+				var availableTags = [
+					"11111",
+					"22222",
+					"33333",
+					"44444",
+					"55555"
+				];
+				$( "#numero" ).autocomplete({
+				  source: availableTags
+				});
+			});
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
@@ -85,14 +97,7 @@
 						<tr>
 							<td id="wrapper_numero">
 								<label for="numero" id="label_numero" class="required">N° Proyecto</label>
-								<select name="tipo" id="tipo">
-									<option value="0">Número...</option>
-									<option value="1">11111</option>
-									<option value="2">22222</option>
-									<option value="3">33333</option>
-									<option value="4">44444</option>
-									<option value="5">55555</option>
-								</select>
+								<input id="numero" type="text" style="width: 100px;" />
 							</td>
 							<span style="position: absolute; padding: 0px 10px 0px 10px; margin: 130px 0px 0px 180px;">
 								<input id="nombre_proyecto" type="text" value="Nombre Proyecto" disabled />
