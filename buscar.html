@@ -18,6 +18,31 @@
 					first = false;
 				}
 			}
+			function filtrar(){
+				if($("#by_cal").is(':checked')){
+					$("#por_fecha").show();
+					$("#por_ano").hide();
+				}
+				if($("#by_year").is(':checked')){
+					$("#por_fecha").hide();
+					$("#por_ano").show();
+				}
+			}
+			$(function() {
+				var availableTags = [
+					"Pablo Barceló",
+					"Alejandro Hevia",
+					"Gonzalo Navarro",
+					"Luis Mateu",
+					"Eric Tánter",
+					"Benjamín Bustos",
+					"Sergio Ochoa",
+					"Jorge Pérez"
+				];
+				$( "#investigador" ).autocomplete({
+				  source: availableTags
+				});
+			});
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
@@ -47,10 +72,13 @@
 					$("#menu_lateral").height(alto_contenido - 127	);
 					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#desde" ).datepicker();
-					$( "#hasta" ).datepicker();
+					$( "#desde" ).datepicker({changeYear: true});
+					$( "#hasta" ).datepicker({changeYear: true});
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
+					
+					$("#by_cal").prop('checked', true);
+					filtrar();
 				}
 			);
 		</script>
@@ -77,33 +105,60 @@
 					<span id="wrapper_notificacion">
 						<label id="notificacion">Área de notificación</label>
 					</span>
-					<span id="wrapper_desde">
-						<label for="desde" id="label_desde">Desde</label>
-						<input type="text" name="desde" id="desde" />
-					</span>
-					<span id="wrapper_hasta">
-						<label for="hasta" id="label_hasta">Hasta</label>
-						<input type="text" name="hasta"  id="hasta"/>
-					</span>
-					<span id="wrapper_tipo">
-						<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
-						<select name="tipo" id="tipo">
-							<option value="0">Tipo...</option>
-							<option value="1">FONDECYT</option>
-							<option value="2">FONDEF</option>
-							<option value="3">MILENIO</option>
-							<option value="4">ANILLO</option>
-							<option value="5">EXTERNO</option>
-						</select>
-					</span>
-					<span id="wrapper_tituloproy">
-						<label for="tituloproy" id="label_tituloproy">Título del Proyecto</label>
-						<input type="text" name="tituloproy"  id="tituloproy"/>
-					</span>
-					<span id="wrapper_investigador">
-						<label for="investigador" id="label_investigador">Nombre del Investigador</label>
-						<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" style="color: #BDBDBD;" onclick="autoClear();"/>
-					</span>
+					<table>
+						<tr>
+							<td style="width: 140px; padding-bottom: 20px;">
+								<label for="by_cal" id="label_bycal">Por Fecha</label>
+								<input id="by_cal" name="by" type="radio" onclick="filtrar();" />
+							</td>
+							<td style="width: 140px; padding-bottom: 20px;">
+								<label for="by_year" id="label_bycal">Por Año</label>
+								<input id="by_year" name="by" type="radio" onclick="filtrar();" />
+							</td>
+						</tr>
+							<tr id="por_fecha">
+								<td style="width: 140px; padding-bottom: 20px;">
+									<label for="desde" id="label_desde">Desde</label>
+									<input type="text" name="desde" id="desde" style="width: 100px;" />
+								</td>
+								<td style="width: 140px; padding-bottom: 20px;">
+									<label for="hasta" id="label_hasta">Hasta</label>
+									<input type="text" name="hasta" id="hasta" style="width: 100px;" />
+								</td>
+							</tr>
+							<tr id="por_ano">
+								<td style="width: 140px; padding-bottom: 20px;">
+									<label for="desde" id="label_desde">Año</label>
+									<select id="año">
+										<option>2012</option>
+										<option>2013</option>
+										<option>2014</option>
+										<option>2015</option>
+										<option>2016</option>
+									</select>
+								</td>
+								<td style="width: 140px; padding-bottom: 10px;"></td>
+							</tr>
+					</table>
+						<span id="wrapper_tipo">
+							<label for="tipo" id="label_tipo">Tipo de Proyecto</label>
+							<select name="tipo" id="tipo">
+								<option value="0">Tipo...</option>
+								<option value="1">FONDECYT</option>
+								<option value="2">FONDEF</option>
+								<option value="3">MILENIO</option>
+								<option value="4">ANILLO</option>
+								<option value="5">EXTERNO</option>
+							</select>
+						</span>
+						<span id="wrapper_tituloproy">
+							<label for="tituloproy" id="label_tituloproy">Título del Proyecto</label>
+							<input type="text" name="tituloproy"  id="tituloproy"/>
+						</span>
+						<span id="wrapper_investigador">
+							<label for="investigador" id="label_investigador">Nombre del Investigador</label>
+							<input type="text" name="investigador" id="investigador" value="Ejemplo: Jorge Pérez" style="color: #BDBDBD;" onclick="autoClear();"/>
+						</span>
 					<span id="wrapper_buscar" style="padding-top: 30px; padding-bottom: 30px">
 						<button name="buscar"  id="buscar" onclick="location.href='resultados_busqueda.html'">Buscar</button>
 					</span>

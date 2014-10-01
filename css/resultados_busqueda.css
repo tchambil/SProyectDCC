@@ -150,7 +150,7 @@ html, body {
 }
 
 .wrapper_ptabla {
-	height: 290px;
+	height: 340px;
 }
 
 .np{
@@ -170,7 +170,7 @@ html, body {
 
 .celda3 {
 	width: 35%;
-	padding: 0px 10px 10px 10px;
+	padding: 0px 10px 0px 10px;
 }
 
 .border-up {

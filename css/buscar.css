@@ -19,7 +19,7 @@ html, body {
 #header_pagina {
 	display: block;
 	width: 100%;
-	height: 79px;
+	height: 65px;
 	border-bottom: 1px solid #009;
 	background: #919ad5; /* Old browsers */
 	background: -moz-linear-gradient(top,  #919ad5 0%, #5c6dac 99%); /* FF3.6+ */
@@ -34,7 +34,7 @@ html, body {
 #logo {
 	float: left;
 	margin-top: 17px;
-	margin-left: 30px;
+	margin-left: 15px;
 }
 
 #login {
@@ -62,7 +62,7 @@ html, body {
 
 #menu_lateral {
 	width: 200px;
-	padding-bottom: 130px;
+	padding-bottom: 144px;
 	float: left;
 	margin-right: 50px;
 	padding-top: 50px;
@@ -161,26 +161,9 @@ html, body {
 	background: linear-gradient(to bottom, rgba(255,255,136,1) 0%,rgba(255,255,249,1) 66%,rgba(255,255,249,1) 66%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#fffff9',GradientType=0 );
 }
-#wrapper_desde {
-	float: left;
-	padding: 0px 0px 10px 0px;
-}
-
-#wrapper_desde input {
-	width: 100px;
-}
-
-#wrapper_hasta {
-	float: left;
-	margin-left: 95px;
-}
-
-#wrapper_hasta input {
-	width: 100px;
-}
 
 #wrapper_tipo {
-	padding-top: 40px;
+	padding-top: 0px;
 	margin-right: 20px;
 	width: 100px;
 }

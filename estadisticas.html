@@ -44,8 +44,8 @@
 					$("#directores").select2({width:620});
 					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#desde" ).datepicker();
-					$( "#hasta" ).datepicker();
+					$( "#desde" ).datepicker({changeYear: true});
+					$( "#hasta" ).datepicker({changeYear: true});
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
 				}

@@ -13,9 +13,23 @@
 		<script src="js/select2-3.5.1/select2_locale_es.js"></script>
 		<link href="js/select2-3.5.1/select2.css" rel="stylesheet"/>
 		<script>
-			$.get( "ingresar.html", function( data ) {
+			function getDCCTax(){
+				var monto_admin = $("#monto_administracion").val();
+				var monto_total = $("#monto_total").val();
+				if(monto_total > 0){
+					$("#peaje_dcc").val(100*monto_admin/monto_total);
+				}
+			}
+			function getAdminAmount(){
+				var peaje_dcc = $("#peaje_dcc").val();
+				var monto_total = $("#monto_total").val();
+				if(monto_total > 0){
+					$("#monto_administracion").val(monto_total*peaje_dcc/100);
+				}
+			}
+			$.post( "ingresar.html", function( data ) {
 				$( ".result" ).html( data );
-				alert( "Load was performed." );
+				alert( "Load was performed "+data );
 			});
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
@@ -40,8 +54,8 @@
 			$(document).ready(
 				function() {					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#fecha_inicio" ).datepicker();
-					$( "#fecha_termino" ).datepicker();
+					$( "#fecha_inicio" ).datepicker({changeYear: true});
+					$( "#fecha_termino" ).datepicker({changeYear: true});
 					
 					/* Fijo los selects customizados para datos dinámicos. */
 					$("#directores").select2({width:606});
@@ -96,7 +110,8 @@
 				<span id="wrapper_estado">
 					<label for="estado" id="label_estado" class="required">Estado Actual</label>
 					<select name="estado" id="estado">
-						<option>Nuevo</option>
+						<option>Seleccionar...</option>
+						<option>Activo</option>
 						<option>Suspendido</option>
 						<option>Terminado</option>
 						<option>Cancelado</option>
@@ -175,15 +190,15 @@
 					<input type="text" name="monto_total" id="monto_total" />
 				</span>
 				<span id="wrapper_monto_administracion">
-					<label for="monto_administracion" id="label_monto_administracion" class="required">Monto Administración</label>
-					<input type="text" name="monto_administracion" id="monto_administracion" />
+					<label for="monto_administracion" id="label_monto_administracion">Monto Administración</label>
+					<input type="text" name="monto_administracion" id="monto_administracion" onchange="getDCCTax();" />
 				</span>
 				<span id="wrapper_peaje_dcc">
-					<label for="peaje_dcc" id="label_peaje_dcc" class="required">Peaje DCC (%)</label>
-					<input type="text" name="peaje_dcc" id="peaje_dcc" />
+					<label for="peaje_dcc" id="label_peaje_dcc">Peaje DCC (%)</label>
+					<input type="text" name="peaje_dcc" id="peaje_dcc" onchange="getAdminAmount();" />
 				</span>
 				<span id="wrapper_peaje_casa_central">
-					<label for="peaje_casa_central" id="label_peaje_casa_central" class="required">Peaje Casa Central y Facultad (%)</label>
+					<label for="peaje_casa_central" id="label_peaje_casa_central">Peaje Casa Central y Facultad (%)</label>
 					<input type="text" name="peaje_casa_central" id="peaje_casa_central" />
 				</span>
 				<div id="wrapper_montos">

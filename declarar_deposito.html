@@ -35,7 +35,7 @@
 			$(document).ready(
 				function() {
 					/* Fijo los datepicker de jQuery UI. */
-					$("#fecha").datepicker();
+					$("#fecha").datepicker({changeYear: true});
 					
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
@@ -94,8 +94,8 @@
 									<option value="5">55555</option>
 								</select>
 							</td>
-							<span style="border: 1px solid #919AD5; position: absolute; padding: 0px 10px 0px 10px; margin: 132px 0px 0px 195px;">
-								<label>Nombre Proyecto</label>
+							<span style="position: absolute; padding: 0px 10px 0px 10px; margin: 130px 0px 0px 180px;">
+								<input id="nombre_proyecto" type="text" value="Nombre Proyecto" disabled />
 							</span>
 						</tr>
 					</table>
