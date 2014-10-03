@@ -10,6 +10,21 @@
 		<script src="js/jquery-ui-1.11.1.custom/external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		<script>
+			function logout() {
+				$("#login").hide();
+				$("#login2").show();
+			}
+			$(function() {
+				$( "#dialog" ).dialog({ position: { my: "left top", at: "right top", of: window } });
+			});
+			function login() {
+				$("#login2").hide();
+				//$("#dialog").show();
+				$("#login").show();
+			}
+			function openDial() {
+				//$("#dialog").show();
+			}
 			/* Con esto traduzco todos los datepickers de jQuery UI a español. */
 			$.datepicker.regional['es'] = {
 				 closeText: 'Cerrar',
@@ -43,6 +58,9 @@
 					$( "#hasta" ).datepicker({changeYear: true});
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
+					$("#login").show();
+					$("#login2").hide();
+					//$("#dialog").hide();
 				}
 			);
 		</script>
@@ -52,8 +70,12 @@
 			<a href="index.html"><img id="logo" src="img/logo.png" alt="logo" /></a>
 			<div id="login">
 				<p><img id="llave_login" src="img/llave.png" alt="llave sesión" />Ha iniciado sesión como <strong>Sergio Ochoa</strong></p>
-				<p><a href="javascript:" id="cerrar_sesion">Cerrar sesión</a></p>
+				<p><a href="javascript:" id="cerrar_sesion" onclick="logout();">Cerrar sesión</a></p>
 			</div>
+			<div id="login2">
+				<p><a href="javascript:" id="iniciar_sesion" onclick="login()">Iniciar Sesión</a></p>
+			</div>
+			<!--<span id="dialog"></span>-->
 		</header>
 		<table>
 			<tr>
