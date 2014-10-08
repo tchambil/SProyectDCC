@@ -18,16 +18,6 @@
 					first = false;
 				}
 			}
-			function filtrar(){
-				if($("#by_cal").is(':checked')){
-					$("#por_fecha").show();
-					$("#por_ano").hide();
-				}
-				if($("#by_year").is(':checked')){
-					$("#por_fecha").hide();
-					$("#por_ano").show();
-				}
-			}
 			$(function() {
 				var availableTags = [
 					"Pablo Barceló",
@@ -82,9 +72,8 @@
 					});
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
-					
-					$("#by_cal").prop('checked', true);
-					filtrar();
+					/* Notificación comienza oculta. */
+					$('#wrapper_notificacion').hide();
 				}
 			);
 		</script>
@@ -112,16 +101,6 @@
 						<label id="notificacion">Área de notificación</label>
 					</span>
 					<table>
-						<tr>
-							<td style="width: 140px; padding-bottom: 20px;">
-								<label for="by_cal" id="label_bycal">Por Fecha</label>
-								<input id="by_cal" name="by" type="radio" onclick="filtrar();" />
-							</td>
-							<td style="width: 140px; padding-bottom: 20px;">
-								<label for="by_year" id="label_bycal">Por Año</label>
-								<input id="by_year" name="by" type="radio" onclick="filtrar();" />
-							</td>
-						</tr>
 							<tr id="por_fecha">
 								<td style="width: 140px; padding-bottom: 20px;">
 									<label for="desde" id="label_desde">Desde</label>
@@ -130,28 +109,6 @@
 								<td style="width: 140px; padding-bottom: 20px;">
 									<label for="hasta" id="label_hasta">Hasta</label>
 									<input type="text" name="hasta" id="hasta" style="width: 100px;" />
-								</td>
-							</tr>
-							<tr id="por_ano">
-								<td style="width: 140px; padding-bottom: 20px;">
-									<label for="desde_ano" id="label_desde_ano">Desde Año</label>
-									<select id="desde_ano">
-										<option>2012</option>
-										<option>2013</option>
-										<option>2014</option>
-										<option>2015</option>
-										<option>2016</option>
-									</select>
-								</td>
-								<td style="width: 140px; padding-bottom: 10px;">
-									<label for="hasta_ano" id="label_hasta_ano">Hasta Año</label>
-									<select id="hasta_ano">
-										<option>2012</option>
-										<option>2013</option>
-										<option>2014</option>
-										<option>2015</option>
-										<option>2016</option>
-									</select>
 								</td>
 							</tr>
 					</table>
