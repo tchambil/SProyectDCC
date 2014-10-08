@@ -54,8 +54,14 @@
 			$(document).ready(
 				function() {					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#fecha_inicio" ).datepicker({changeYear: true});
-					$( "#fecha_termino" ).datepicker({changeYear: true});
+					$( "#fecha_inicio" ).datepicker({
+						changeYear: true,
+						changeMonth: true
+					});
+					$( "#fecha_termino" ).datepicker({
+						changeYear: true,
+						changeMonth: true
+					});
 					
 					/* Fijo los selects customizados para datos dinámicos. */
 					$("#directores").select2({width:506});
