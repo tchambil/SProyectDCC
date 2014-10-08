@@ -54,8 +54,14 @@
 					$("#menu_lateral").height(alto_contenido - 127	);
 					
 					/* Fijo los datepicker de jQuery UI. */
-					$( "#desde" ).datepicker({changeYear: true});
-					$( "#hasta" ).datepicker({changeYear: true});
+					$( "#desde" ).datepicker({
+						changeYear: true,
+						changeMonth: true
+					});
+					$( "#hasta" ).datepicker({
+						changeYear: true,
+						changeMonth: true
+					});
 					/* Marco todos los campos requeridos con un asterisco. */
 					$(".required").append("<div class='marca_obligatorios'>*</div>");
 					$("#login").show();
